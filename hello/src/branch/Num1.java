@@ -5,6 +5,8 @@ package branch;
 
 import java.util.Scanner;
 
+import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
+
 /**
  * @date   : 2016. 6. 9. 
  * @author : 한상호
@@ -36,6 +38,22 @@ public class Num1 {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		int H=0,K=0,Ku=0;
+		String top="";
 		System.out.println("3명의 평균 점수를 입력하세요");
+		System.out.println("홍길동");
+		H = scanner.nextInt();
+		System.out.println("김유신");
+		K = scanner.nextInt();
+		System.out.println("김  구");
+		Ku = scanner.nextInt();
+		if (H > K&&H >Ku) {
+			top = "1등";
+			if (H < K) {
+			top = "2등";
+			}else {
+			top = "3등";	
+			}
+		}
+		System.out.println(""+top+"");
 	}
 }
