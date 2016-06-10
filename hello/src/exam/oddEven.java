@@ -22,19 +22,17 @@ public class oddEven {
     Scanner scanner = new Scanner(System.in);
 	Random random = new Random();
 	String con = "";
-	int num=0,call=0,ran1=0;
+	int num=0,call=0;
     num = random.nextInt(10)+1;
-    System.out.println("== 개발자만 보는 화면 ==");
-    System.out.println("랜덤수는"+num);
     System.out.println("돈을 거시는데 짝이라고 생각하면 0을 "
     		+ "홀이라고 생각하면 1을 입력하세요.");
     call = scanner.nextInt();
-	switch (call) {
+	switch (num%2) {
 	case 1:
-		con = "LOOSE";
+		con = "WIN";
 		break;
 	default:
-		con = "WIN";
+		con = "LOOSE";
 		break;
 	}
     System.out.println(con);
